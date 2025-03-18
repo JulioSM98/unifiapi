@@ -408,6 +408,7 @@ class UnifiClientBase(object):
             self._s.headers['User-Agent'] = 'unifiapi library based on requests'
         else:
             self._s = session
+            verify = session.verify
 
         self.endpoint = endpoint.rstrip('/')
         if proxy:
